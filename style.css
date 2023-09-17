@@ -38,13 +38,18 @@ button:hover {
 }
 
 main {
-  margin-top: 20px;
-  min-height: 100vh;
+  padding-top: 5rem;
+  width: 100%;
+  position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
-  overflow-y: visible;
+}
+
+.search-box {
+  width: fit-content;
+  margin-inline: auto;
 }
 
 .profile-img {
@@ -54,29 +59,8 @@ main {
   border: 1px solid whitesmoke;
 }
 
-.wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: whitesmoke;
-  border-radius: 25px;
-  border: 2px solid RGBA(0, 0, 0, 0.92);
-  box-shadow: 2px 4px 10px black;
-  padding: 20px 60px 20px 60px;
-  gap: 2rem;
-}
-
-.repos {
-  display: flex;
-  width: 500px;
-  flex-wrap: wrap;
-  margin-top: 10px;
-  gap: 1em;
-}
-
 .repos a {
   border: 1px solid snow;
-  width: fit-content;
   border-radius: 5px;
   text-decoration: none;
   padding: 5px;
@@ -88,30 +72,27 @@ main {
   color: black;
 }
 
-.info {
-  display: flex;
-  flex-direction: column;
+.result {
+  display: grid;
+  gap: 3rem;
+  place-items: center;
+  width: 100%;
+  margin: auto;
+  padding-bottom: 5rem;
+  padding-top: 3rem;
 }
 
-@media only screen and (max-width: 468px) {
-  .wrapper {
-    display: grid;
-    grid-template-rows: auto;
-    place-items: center;
-    width: 320px;
-  }
+.info {
+  text-align: center;
+}
 
-  section {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
-
-  .repos {
-    width: 300px;
-  }
-
-  h1 {
-    padding-top: 20px;
-  }
+.repos {
+  padding-top: 20px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  margin-inline: 5rem;
+  width: fit-content;
+  gap: 1rem;
 }
